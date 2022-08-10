@@ -45,6 +45,16 @@ module.exports = {
 					},
 				],
 			},
+			{
+				test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
+				use: [{
+					loader: 'file-loader',
+					options: {
+						outputPath: 'images',
+						name: '[name].[ext]'
+					}
+				}]
+			}
 		],
 	},
 	plugins: [

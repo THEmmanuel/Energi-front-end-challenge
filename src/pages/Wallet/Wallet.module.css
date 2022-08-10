@@ -1,0 +1,26 @@
+.Wallet{
+	width: 50%;
+	margin: auto;
+}
+
+.ConnectButton{
+	background-color: #00AB58;
+	border: 0;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 0.9em;
+	color: #CEEFDF;
+	width: fit-content;
+	margin: auto;
+}
+
+.MetamaskImage{
+	width: 240px;
+}
+
+.WalletWrapper{
+	width: fit-content;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
