@@ -11,3 +11,7 @@
 td, th{
 	border: 1px solid #2E333A;
 }
+
+th{
+	text-align: left;
+}

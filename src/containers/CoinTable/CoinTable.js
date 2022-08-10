@@ -4,6 +4,11 @@ import axios from 'axios';
 
 const url = 'https://api.energiswap.exchange/v1/assets'
 
+const currencyFormatter = new Intl.NumberFormat('en-US', {
+	style: 'currency',
+	currency: 'USD',
+})
+
 const CoinTable = () => {
 
 	const [data, setData] = useState({})
@@ -36,7 +41,9 @@ const CoinTable = () => {
 							<td>{index + 1}</td>
 							<td>{value.name}</td>
 							<td>{value.symbol}</td>
-							<td>{value.last_price}</td>
+							<td>
+								{currencyFormatter.format(value.last_price)}
+							</td>
 						</tr>
 					)
 				}
