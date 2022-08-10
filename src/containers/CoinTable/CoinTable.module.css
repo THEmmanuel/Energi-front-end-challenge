@@ -1,4 +1,4 @@
-.CoinTableWrapper{
+.CoinTableWrapper {
 	color: #F1F1F1;
 	border-radius: 5px;
 	width: 45%;
@@ -8,10 +8,12 @@
 	border: 1px solid #2E333A;
 }
 
-td, th{
-	border: 1px solid #2E333A;
+td,
+th {
+	border-bottom: 1px solid #2E333A;
+	text-align: left;
+	padding: 15px;
 }
 
-th{
-	text-align: left;
+.Nav {
 }

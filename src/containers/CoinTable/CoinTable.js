@@ -9,18 +9,30 @@ const currencyFormatter = new Intl.NumberFormat('en-US', {
 	currency: 'USD',
 })
 
+// useEffect(() => {
+// 	async function fetchData() {
+// 		// You can await here
+// 		const response = await MyAPI.getData(someId);
+// 		// ...
+// 	}
+// 	fetchData();
+// }, [someId]); // Or [] if effect doesn't need props or state
+
 const CoinTable = () => {
 
 	const [data, setData] = useState({})
 
 	// Fetch data on component mount. Empty dependency array
-	useEffect(async () => {
-		try {
-			await axios.get(url)
-				.then(res => setData(res.data))
-		} catch (error) {
-			console.log(error)
+	useEffect(() => {
+		async function fetchCoins() {
+			try {
+				await axios.get(url)
+					.then(res => setData(res.data))
+			} catch (error) {
+				console.log(error)
+			}
 		}
+		fetchCoins()
 	}, [])
 
 	console.log(typeof data)
@@ -37,7 +49,7 @@ const CoinTable = () => {
 
 				{Object.values(data).map((value, index) => {
 					return (
-						<tr>
+						<tr className={style.TableContent}>
 							<td>{index + 1}</td>
 							<td>{value.name}</td>
 							<td>{value.symbol}</td>

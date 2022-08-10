@@ -1,0 +1,23 @@
+.NavIcon {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.IconContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+}
+
+.IconText{
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+.ActiveIndicator {
+	background-color: #00E676;
+	width: 100%;
+	height: 5px;
+	border-radius: 2px;
+}
