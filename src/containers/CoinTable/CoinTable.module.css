@@ -1,0 +1,9 @@
+.CoinTableWrapper{
+	color: #F1F1F1;
+	border-radius: 5px;
+	width: 45%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #2E333A;
+}
