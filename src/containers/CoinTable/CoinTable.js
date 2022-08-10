@@ -38,7 +38,9 @@ const CoinTable = () => {
 					<th>Price</th>
 				</tr>
 
-				{Object.values(data).map((value, index) => {
+				{Object.values(data)
+				.sort((a, b) => b.last_price - a.last_price)
+				.map((value, index) => {
 					return (
 						<tr className={style.TableContent}>
 							<td>{index + 1}</td>
