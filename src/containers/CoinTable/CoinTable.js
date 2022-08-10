@@ -22,15 +22,6 @@ const CoinTable = () => {
 
 	return (
 		<div className={style.CoinTableWrapper}>
-			{/* <div className={style.CoinTableHeading}>
-				<span>#</span>
-				<span>Coin</span>
-				<span>Price</span>
-			</div>
-
-			<div className={style.CoinTableContent}>
-				<Coin />
-			</div> */}
 			<table>
 				<tr>
 					<th>#</th>
