@@ -11,7 +11,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: "main.js",
-		publicPath: "",
+		publicPath: "/",
 	},
 	target: ["web", "es5"],
 	stats: {
@@ -23,6 +23,7 @@ module.exports = {
 		compress: true,
 		port: 8080,
 		open: true,
+		historyApiFallback: true,
 	},
 	devtool: "inline-source-map",
 	module: {
