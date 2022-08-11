@@ -9,7 +9,7 @@ const Wallet = () => {
 	const [hasMetamask, setHasMetamask] = useState(true);
 	const [accountAddress, setAccountAddress] = useState('')
 	const [accountBalance, setAccountBalance] = useState('')
-	const [isConnected, setIsConnected] = useState(false)
+	const [isConnected, setIsConnected] = useState(true)
 
 	const { ethereum } = window;
 	const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -49,7 +49,11 @@ const Wallet = () => {
 				!isConnected
 					?
 					<div className={style.WalletWrapper}>
-						<img src={Metamask} alt="" className={style.MetamaskImage} />
+						<div className={style.WalletContainer}>
+							<img src={Metamask} alt="" className={style.MetamaskImage} />
+							<span className={style.MetamaskText}>METAMASK</span>
+						</div>
+
 						<CTAButton
 							ButtonText='Connect Wallet'
 							ButtonClick={connectWalletHandler}

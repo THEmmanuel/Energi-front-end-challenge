@@ -25,8 +25,9 @@ const AccountModal = props => {
 						</div>
 
 						<div className={style.WalletActions}>
-							<span>Copy</span>
-							<span>Share</span>
+							<img src="https://img.icons8.com/fluency-systems-regular/48/717477/copy.png" alt="" />
+
+							<img src="https://img.icons8.com/windows/32/717477/export.png"/>
 						</div>
 					</div>
 

@@ -5,30 +5,31 @@ import {
 	Route,
 	Link
 } from 'react-router-dom';
-import './App.css';
+import style from './App.module.css';
 import Home from './pages/Home/Home';
 import Wallet from './pages/Wallet/Wallet'
 import NavIcon from './components/NavIcon/NavIcon';
-import style from './containers/Nav/Nav.module.css'
+import NavStyle from './containers/Nav/Nav.module.css'
 
-// const Nav = () => {
-// 	return (
-
-// 	)
-// }
 
 const App = () => {
 	return (
 		<Router>
-			<div className="App">
+			<div className={style.App}>
 				{/* <Nav /> */}
-				<nav className={style.Nav}>
+				<nav className={NavStyle.Nav}>
 					<Link to='Home'>
-						<NavIcon />
+						<NavIcon
+							TabIcon='https://img.icons8.com/material-rounded/22/A2ADB8/home.png'
+							TabName='Home'
+						/>
 					</Link>
 
 					<Link to='Wallet'>
-						<NavIcon />
+						<NavIcon
+							TabIcon='https://img.icons8.com/ios-glyphs/22/A2ADB8/coin-wallet.png'
+							TabName='Wallet'
+						/>
 					</Link>
 				</nav>
 

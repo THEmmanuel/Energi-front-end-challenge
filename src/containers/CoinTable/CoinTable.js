@@ -38,21 +38,23 @@ const CoinTable = () => {
 					<th>Price</th>
 				</tr>
 
-				{Object.values(data)
-				.sort((a, b) => b.last_price - a.last_price)
-				.map((value, index) => {
-					return (
-						<tr className={style.TableContent}>
-							<td>{index + 1}</td>
-							<td>{value.name}</td>
-							<td>{value.symbol}</td>
-							<td>
-								{currencyFormatter.format(value.last_price)}
-							</td>
-						</tr>
-					)
-				}
-				)
+				{!data
+					? <span>Loading</span>
+					: Object.values(data)
+						.sort((a, b) => b.last_price - a.last_price)
+						.map((value, index) => {
+							return (
+								<tr className={style.TableContent}>
+									<td>{index + 1}</td>
+									<td>{value.name}</td>
+									<td>{value.symbol}</td>
+									<td>
+										{currencyFormatter.format(value.last_price)}
+									</td>
+								</tr>
+							)
+						}
+						)
 				}
 			</table>
 		</div>
