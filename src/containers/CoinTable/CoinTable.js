@@ -1,32 +1,13 @@
 import React, { useState, useEffect } from "react";
 import style from './CoinTable.module.css';
-import axios from 'axios';
-
-const url = 'https://api.energiswap.exchange/v1/assets'
 
 const currencyFormatter = new Intl.NumberFormat('en-US', {
 	style: 'currency',
 	currency: 'USD',
 })
 
-const CoinTable = () => {
-
-	const [data, setData] = useState({})
-
-	// Fetch data on component mount. Empty dependency array
-	useEffect(() => {
-		async function fetchCoins() {
-			try {
-				await axios.get(url)
-					.then(res => setData(res.data))
-			} catch (error) {
-				console.log(error)
-			}
-		}
-		fetchCoins()
-	}, [])
-
-	console.log(typeof data)
+const CoinTable = props => {
+	const data = props.data
 
 	return (
 		<div className={style.CoinTableWrapper}>

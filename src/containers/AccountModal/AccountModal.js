@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './AccountModal.module.css';
+import metamask from '../../../assets/metamask.svg';
 
 const AccountModal = props => {
 	return (
@@ -21,13 +22,14 @@ const AccountModal = props => {
 
 					<div className={style.AccountInformation}>
 						<div className={style.WalletAddressWrapper}>
+							<img src={metamask} className = {style.MetamaskIcon}/>
 							<span>{props.WalletAddress}</span>
 						</div>
 
 						<div className={style.WalletActions}>
-							<img src="https://img.icons8.com/fluency-systems-regular/48/717477/copy.png" alt="" />
+							<img src="https://img.icons8.com/fluency-systems-regular/48/717477/copy.png" alt="" className={style.WalletIcon}/>
 
-							<img src="https://img.icons8.com/windows/32/717477/export.png"/>
+							<img src="https://img.icons8.com/windows/32/717477/export.png" className={style.WalletIcon}/>
 						</div>
 					</div>
 

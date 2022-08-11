@@ -5,11 +5,11 @@ import CTAButton from '../../components/CTAButton/CTAButton';
 import AccountModal from '../../containers/AccountModal/AccountModal';
 import { ethers } from 'ethers';
 
-const Wallet = () => {
+const Wallet = props => {
 	const [hasMetamask, setHasMetamask] = useState(true);
 	const [accountAddress, setAccountAddress] = useState('')
 	const [accountBalance, setAccountBalance] = useState('')
-	const [isConnected, setIsConnected] = useState(true)
+	const [isConnected, setIsConnected] = useState(false)
 
 	const { ethereum } = window;
 	const provider = new ethers.providers.Web3Provider(window.ethereum);

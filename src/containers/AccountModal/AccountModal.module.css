@@ -98,3 +98,11 @@
 	margin: auto;
 	gap: 5px;
 }
+
+.MetamaskIcon{
+	width: 20px;
+}
+
+.WalletIcon{
+	width: 24px;
+}
