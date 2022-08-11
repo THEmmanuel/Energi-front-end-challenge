@@ -1,6 +1,7 @@
 .Wallet{
-	width: 50%;
+	width: 100%;
 	margin: auto;
+	background-color: #141619;
 }
 
 .MetamaskImage{

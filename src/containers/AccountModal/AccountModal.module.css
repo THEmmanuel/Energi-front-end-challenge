@@ -1,0 +1,98 @@
+.AccountModal {
+	width: 70%;
+	background-color: #1A2024;
+	margin: auto;
+	border-radius: 8px;
+	padding: 20px;
+	color: #FFF;
+}
+
+.AccountDetails {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	width: 100%;
+	gap: 20px;
+}
+
+.AccountModalWrapper {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	background-color: transparent;
+}
+
+.NetworkInformation {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	border-bottom: 1px solid #2E363D;
+	padding-bottom: 5px;
+}
+
+.WalletAddressWrapper {
+	width: 50%;
+}
+
+.BalanceHeading {
+	color: #384249;
+	font-weight: 600;
+	font-size: 0.8em;
+}
+
+.WalletActions {
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+	justify-content: right;
+	gap: 15px;
+}
+
+.Network {
+	width: 50%;
+}
+
+.ConnectionStatus {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	align-items: center;
+	gap: 10px;
+}
+
+.dot {
+	width: 10px;
+	height: 10px;
+	background-color: #05C167;
+	border-radius: 50%;
+}
+
+.AccountInformation {
+	display: flex;
+	flex-direction: row;
+}
+
+.AccountBalance {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	width: fit-content;
+	gap: 5px;
+}
+
+.CryptoBalance{
+	font-size: 2em;
+	color: yellow;
+}
+
+.AccountUSDBalance{
+	font-size: 2em;
+	font-weight: 600;
+}
+
+.Balance{
+	display: flex;
+	margin: auto;
+	gap: 5px;
+}
