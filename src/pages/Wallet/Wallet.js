@@ -45,19 +45,24 @@ const Wallet = () => {
 
 	return (
 		<div className={style.Wallet}>
-			<div className={style.WalletWrapper}>
-				<img src={Metamask} alt="" className={style.MetamaskImage} />
-				<CTAButton
-					ButtonText='Connect Wallet'
-					ButtonClick={connectWalletHandler}
-				/>
-			</div>
+			{
+				!isConnected
+					?
+					<div className={style.WalletWrapper}>
+						<img src={Metamask} alt="" className={style.MetamaskImage} />
+						<CTAButton
+							ButtonText='Connect Wallet'
+							ButtonClick={connectWalletHandler}
+						/>
+					</div>
+					:
+					<AccountModal
+						WalletAddress={accountAddress}
+						Balance={accountBalance}
+						USDBalance={accountBalance * 4}
+					/>
+			}
 
-			<AccountModal
-				WalletAddress={accountAddress}
-				Balance={accountBalance}
-				USDBalance={accountBalance * 4}
-			/>
 		</div>
 	)
 }
