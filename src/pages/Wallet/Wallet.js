@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import style from './Wallet.module.css';
 import Metamask from '../../../assets/metamask.svg';
+import CTAButton from '../../components/CTAButton/CTAButton';
 import { Ethers } from 'ethers'
 
 const Wallet = () => {
@@ -21,7 +22,7 @@ const Wallet = () => {
 
 	const connectWalletHandler = async () => {
 		try {
-			if (!ethereum){
+			if (!ethereum) {
 				setHasMetamask(false)
 			}
 			const accounts = await ethereum.request({
@@ -39,12 +40,10 @@ const Wallet = () => {
 		<div className={style.Wallet}>
 			<div className={style.WalletWrapper}>
 				<img src={Metamask} alt="" className={style.MetamaskImage} />
-				<button
-				className={style.ConnectButton}
-				onClick = {connectWalletHandler}>
-					Connect Wallet
-				</button>
-
+				<CTAButton 
+					ButtonText = 'Connect Wallet'
+					ButtonClick = {connectWalletHandler}
+				/>
 			</div>
 		</div>
 	)
